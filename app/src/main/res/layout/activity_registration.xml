@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".RegistrationActivity">
+
+    <!-- Header Title -->
+    <TextView
+        android:id="@+id/txt_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="#212121"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Username -->
+    <EditText
+        android:id="@+id/edt_name"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="Username"
+        android:background="@drawable/edit_text_background"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+        android:textColorHint="#757575"
+        android:textColor="#000000"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.85"
+        app:layout_constraintTop_toBottomOf="@id/txt_register" />
+
+    <!-- Roll Number -->
+    <EditText
+        android:id="@+id/edt_rollno"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="Roll Number"
+        android:background="@drawable/edit_text_background"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+        android:textColorHint="#757575"
+        android:textColor="#000000"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.85"
+        app:layout_constraintTop_toBottomOf="@id/edt_name" />
+
+    <!-- Password -->
+    <EditText
+        android:id="@+id/edt_password"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="Password"
+        android:background="@drawable/edit_text_background"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+        android:textColorHint="#757575"
+        android:textColor="#000000"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.85"
+        app:layout_constraintTop_toBottomOf="@id/edt_rollno" />
+
+    <!-- Confirm Password -->
+    <EditText
+        android:id="@+id/edt_cnfpswd"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="Confirm Password"
+        android:background="@drawable/edit_text_background"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+        android:textColorHint="#757575"
+        android:textColor="#000000"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.85"
+        app:layout_constraintTop_toBottomOf="@id/edt_password" />
+
+    <!-- Gender Radio Group -->
+    <RadioGroup
+        android:id="@+id/gender_radio_group"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.85"
+        app:layout_constraintTop_toBottomOf="@id/edt_cnfpswd">
+
+        <RadioButton
+            android:id="@+id/radio_male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:textSize="16sp"
+            android:layout_marginEnd="20dp" />
+
+        <RadioButton
+            android:id="@+id/radio_female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            android:textSize="16sp" />
+    </RadioGroup>
+
+    <!-- Branch Spinner -->
+    <Spinner
+        android:id="@+id/branch_spinner"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@drawable/edit_text_background"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.85"
+        app:layout_constraintTop_toBottomOf="@id/gender_radio_group" />
+
+    <!-- Terms and Conditions Checkbox -->
+    <CheckBox
+        android:id="@+id/termsCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I agree to the Terms and Conditions"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/branch_spinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Register Button -->
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#1976D2"
+        android:text="REGISTER"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.85"
+        app:layout_constraintTop_toBottomOf="@id/termsCheckBox" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
